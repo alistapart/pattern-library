@@ -13,17 +13,22 @@
     text-align: center;
 }
 
+.xx .swatches {
+    margin: 1em 0;
+}
+
 .xx .swatch {
   float: left;
   margin-bottom: 1em;
-  width: 96%;
-  margin-right: 2%;
+  width: 100%;
+  
   background-color: white;
   padding: 10px 0;
   padding: 0.625rem 0;
-  border-radius: 3px;
-  border-radius: 0.1875rem;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.xx .swatch:last-child {
+    margin-right: 0;
 }
 
 .xx .swatch-details {
@@ -33,17 +38,18 @@
 
 @media (min-width: 40em) {
   .xx .swatch {
-    width: 33%;
+    width: 31%;
+    margin-right: 2%;
   }
 }
 @media (min-width: 50em) {
   .xx .swatch {
-    width: 25%;
+    width: 23%;
   }
 }
 @media (min-width: 60em) {
   .xx .swatch {
-    width: 20%;
+    width: 18.4%;
   }
 }
 
@@ -58,9 +64,12 @@
 }
 
 .xx .swatch-details {
-  float: left;
-  margin: 0 1em 0 0;
+  display: block;
+  margin: 0;
+  padding: 1em 0;
   font-size: 0.8em;
+  color: #fff;
+  text-align: center;
   clear: both;
   font-family: "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
 }
@@ -158,6 +167,7 @@
   border-top: none;
   width: 96%;
   margin-left: 2%;
+  float: left;
 }
 
 .xx .pattern {
