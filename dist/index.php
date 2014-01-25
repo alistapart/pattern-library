@@ -19,7 +19,6 @@
 
 	
 </head>
-<body>
 
 <body class="xx">
     
