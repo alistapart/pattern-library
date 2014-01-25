@@ -4,6 +4,11 @@
   background-color: white;
 }
 
+.xx-title {
+    margin-top: 2em;
+    text-align: center;
+}
+
 .xx .swatch {
   float: left;
   margin-bottom: 1em;
@@ -65,11 +70,9 @@
 .xx .pattern {
   clear: both;
   float: left;
-  margin: 0 0 3em;
+  margin: 0 0 1.5em;
+  padding-top: 3.5em;
   width: 100%;
-  border: 1px solid;
-  border-color: #e5e5e5;
-  border-radius: 3px;
 }
 
 .xx-patchwork .pattern {
@@ -89,12 +92,11 @@
   background-color: #fbf9f9;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
   padding: 0.5em 1%;
-  width: 98%;
+  width: calc(98% - 1px);
   overflow: hidden;
   display: block;
-  border-bottom: 1px solid;
+  border: 1px solid;
   border-color: #e5e5e5;
-  border-color: rgba(229, 229, 229, 0.5);
   border-radius: 3px 3px 0 0;
 }
 
@@ -145,6 +147,10 @@
   padding: 10px;
   width: auto;
   background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e5e5;
+  border-radius: 0 0 3px 3px;
+  border-top: none;
 }
 
 .xx .pattern {
@@ -160,4 +166,14 @@
 .xx .pattern-link:focus,
 .xx .pattern-link:active {
   border-bottom: none;
+}
+
+.xx .pattern-jump {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    text-align: right;
+    padding: 0.5em 2%;
 }

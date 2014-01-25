@@ -29,9 +29,9 @@
     
     <?php else : ?>
         
-        <h1>ALA Pattern Library</h1>
+        <h1 class="xx-title">ALA Pattern Library</h1>
         
-        <form action="" method="post" id="pattern">
+        <form action="" class="pattern-jump" method="post" id="pattern">
             <select name="section" id="pattern-select" class="nav-section-select">
                 <option value="">Jump to&#8230;</option>
                 <?php displayOptions($patternsPath); ?>
@@ -52,5 +52,30 @@
 </body>
 
 <script src="js/pattern-lib.js"></script>
+
+<script>
+
+    // Adds class of js to the html tag if JS is enabled
+    document.getElementsByTagName('html')[0].className += ' js';
+    
+    // Adds class of svg to the html tag if svg is enabled
+    (function flagSVG() {
+        var ns = {'svg': 'http://www.w3.org/2000/svg'};
+        if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")) {document.getElementsByTagName('html')[0].className += ' svg';}
+    })();
+    
+    (function (document, undefined) {
+        // Pattern selector
+        document.getElementById('pattern-submit').style.display = 'none';
+        document.getElementById('pattern-select').onchange = function() {
+            //document.location=this.options[this.selectedIndex].value;
+            var val = this.value;
+            if (val !== "") {
+                window.location = val;
+            }
+        }
+    })(document);
+
+</script>
 
 </html> 
