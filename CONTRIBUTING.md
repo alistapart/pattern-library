@@ -7,9 +7,6 @@
 #### Cloning the Repo
 [ TK: Basic instructions. ]
 
-#### Setting up Your Dev Environment
-[ TK: vhost, looking at dist? Might not need that setup here, depending. ]
-
 #### Running the Project
 
 We're using Node.js, NPM (_Node Package Manager_), and Grunt.js to manage the code in this repo. To preview code locally, you'll need to [install Node and NPM](http://nodejs.org/), then run the following commands from a terminal window, in the repo directory:
@@ -21,15 +18,19 @@ $ grunt
 Those commands do the following:
 
 - `npm install` will install the necessary node.js packages to develop on this project
-- `grunt` will run a series of tasks defined in `gruntfile.js`, such as concatenating or minifying CSS and JavaScript, and copying relevant production files to the `_dist` directory.
+- `grunt` will run a series of tasks defined in `gruntfile.js`, such as concatenating or minifying CSS and JavaScript, and copying relevant production files to the `dist` directory.
 
-Once run, you can preview the site by pointing a web server at the 'dist' directory.
+Once run, you can preview the site by pointing a web server at the `dist` directory (see below).
 
 We have set up a `watch` task to automatically rebuild the `dist` files whenever files are changed. When you start working, just run the following commands to run all tasks and then start the watch task:
 
 ``` bash
 $ grunt && grunt watch
 ```
+
+#### Setting up Your Dev Environment
+
+Using MAMP or Apache or what-have-you, you’ll want to create a virtualhost that points at `[…]/pattern-library/dist/`. Now you can edit files in the `tmpl` directory, and the `grunt watch` task will automatically rebuild `dist` as you go—giving you a preview of the site as it will appear in the wild, minified and concatenated assets and all.
 
 ## Reporting Issues
 
