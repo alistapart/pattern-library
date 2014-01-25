@@ -63,8 +63,15 @@ module.exports = function(grunt) {
 			main: {
 				files: [
 					{
-						src: ['_tmpl/*.html'],
+						src: ['_tmpl/*.php'],
 						dest: 'dist/',
+						expand: true,
+						flatten: true,
+						filter: 'isFile'
+					},
+					{
+						src: ['_tmpl/patterns/*'],
+						dest: 'dist/patterns',
 						expand: true,
 						flatten: true,
 						filter: 'isFile'
