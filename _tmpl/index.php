@@ -17,7 +17,7 @@
 
 	<link rel="stylesheet" href="css/pattern-lib.css" />
 
-	<script src="js/pattern-lib.min.js"></script>
+	
 </head>
 <body>
 
@@ -35,6 +35,7 @@
             <select name="section" id="pattern-select" class="nav-section-select">
                 <option value="">Jump to&#8230;</option>
                 <?php displayOptions($patternsPath); ?>
+                
             </select>
             <input type="hidden" name="uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
             <button type="submit" id="pattern-submit">Go</button>
@@ -49,5 +50,7 @@
     <?php endif; ?>
 	
 </body>
+
+<script src="js/pattern-lib.js"></script>
 
 </html> 

@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		jshint: {
+		/*jshint: {
 			files: ['Gruntfile.js', 'dist/js/pattern-lib.js'],
 			options: {
 				globals: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 					document: true
 				}
 			}
-		},
+		},*/
 		watch: {
 			files: [
 				'_tmpl/*',
@@ -115,5 +115,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('cleanup', ['chmod:writeable', 'clean', 'chmod:readonly']);
-	grunt.registerTask('default', ['chmod:writeable', 'clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy', 'chmod:readonly']);
+	grunt.registerTask('default', ['chmod:writeable', 'clean', 'concat', /*'jshint',*/ 'uglify', 'cssmin', 'copy', 'chmod:readonly']);
 };
