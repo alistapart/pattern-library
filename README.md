@@ -34,6 +34,12 @@ $ grunt && grunt watch
 
 Using MAMP or Apache or what-have-you, you’ll want to create a virtualhost that points at `[…]/pattern-library/dist/`. Now you can edit files in the `tmpl` directory, and the `grunt watch` task will automatically rebuild `dist` as you go—giving you a preview of the site as it will appear in the wild, minified and concatenated assets and all.
 
+#### Adding Patterns
+
+All patterns are separate HTML files that live in /patterns. Ideally, the file name should be the same as the pattern's main class name. Add a file to see it in the library.
+
+If you'd like to add usage notes to a pattern, add a .txt file with the same name as the .html file and it'll get pulled into the right place.
+
 ## Reporting Issues
 
 If you encounter a bug, please report it in the [issue tracker](https://github.com/alistapart/pattern-library/issues/new). Before opening a new issue, have a quick look to see whether a similar issue already has already been reported—if so, better to comment on that thread.
