@@ -26,12 +26,11 @@
     <?php if(isset($_GET["url"])) : ?>
         
         <?php include($patternsPath.$_GET["url"]) ?>
-    
+
     <?php else : ?>
         
         <h1 class="xx-title">A Pattern Apart</h1>
         <p class="xx-subtitle">A List Apart's pattern library</p>
-        
         
         <div class="global-nav deluxe xx-nav">
             
