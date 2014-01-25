@@ -1,11 +1,15 @@
 .xx {
-  padding: 1em 2%;
+  padding: 1em 0;
   margin: 0;
   background-color: white;
 }
 
 .xx-title {
-    margin-top: 2em;
+    margin: 2em 0 0.25em 0;
+    text-align: center;
+}
+
+.xx-subtitle {
     text-align: center;
 }
 
@@ -70,8 +74,9 @@
 .xx .pattern {
   clear: both;
   float: left;
-  margin: 0 0 1.5em;
+  margin: 0;
   padding-top: 3.5em;
+  padding-bottom: 1.5em;
   width: 100%;
 }
 
@@ -92,7 +97,8 @@
   background-color: #fbf9f9;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
   padding: 0.5em 1%;
-  width: calc(98% - 1px);
+  width: 96%;
+  margin-left: 2%;
   overflow: hidden;
   display: block;
   border: 1px solid;
@@ -145,12 +151,13 @@
 
 .xx .pattern-preview {
   padding: 10px;
-  width: auto;
   background-color: #fff;
   border: 1px solid;
   border-color: #e5e5e5;
   border-radius: 0 0 3px 3px;
   border-top: none;
+  width: 96%;
+  margin-left: 2%;
 }
 
 .xx .pattern {
@@ -168,12 +175,19 @@
   border-bottom: none;
 }
 
-.xx .pattern-jump {
+.xx .xx-nav {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100%;
-    background-color: rgba(0,0,0,0.6);
-    text-align: right;
     padding: 0.5em 2%;
+    left: 0;
+    min-height: 30px;
+}
+
+.xx .xx-nav .inline-items {
+    float: left;
+}
+
+.xx .pattern-jump {
+    float: right;
+    margin: 0.75em 0;
 }

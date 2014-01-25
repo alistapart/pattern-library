@@ -29,17 +29,27 @@
     
     <?php else : ?>
         
-        <h1 class="xx-title">ALA Pattern Library</h1>
+        <h1 class="xx-title">A Pattern Apart</h1>
+        <p class="xx-subtitle">A List Apart's pattern library</p>
         
-        <form action="" class="pattern-jump" method="post" id="pattern">
-            <select name="section" id="pattern-select" class="nav-section-select">
-                <option value="">Jump to&#8230;</option>
-                <?php displayOptions($patternsPath); ?>
-                
-            </select>
-            <input type="hidden" name="uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
-            <button type="submit" id="pattern-submit">Go</button>
-        </form>
+        
+        <div class="global-nav deluxe xx-nav">
+            
+            <ul class="inline-items">
+                <li><a href="/">Home</a></li>
+            </ul>
+            
+            <form action="" method="post" id="pattern" class="pattern-jump">
+                <select name="section" id="pattern-select" class="nav-section-select">
+                    <option value="">Jump to&#8230;</option>
+                    <?php displayOptions($patternsPath); ?>
+                    
+                </select>
+                <input type="hidden" name="uri" value="<?php echo $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"]; ?>">
+                <button type="submit" id="pattern-submit">Go</button>
+            </form>
+            
+        </div>
         
         <main role="main">
         
