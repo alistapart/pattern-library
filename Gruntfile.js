@@ -116,15 +116,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('cleanup', ['chmod:writeable', 'clean', 'chmod:readonly']);
 
-/* chmod tasks are only useable when doing a remote build, which we will eventually. Else
-   we’re going to end up with a lot of local permission weirdness. The chmod tasks are 
-   handy in that they don’t allow you to accidentally make changes to anything in dist.
 
-   Committing dist files is a recipe for conflicts. Instead, we’ll install Node and Grunt 
-   and such on the remote server, and have the server Grunt everything up after pulling the 
-   latest from the repo.
-*/
-// grunt.registerTask('default', ['chmod:writeable', 'clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy', 'chmod:readonly']);
-
-	grunt.registerTask('default', ['clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy']);
+	grunt.registerTask('default', ['chmod:writeable', 'clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy', 'chmod:readonly']);
+	grunt.registerTask('watch', ['chmod:writeable', 'clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy', 'chmod:readonly']);
 };
