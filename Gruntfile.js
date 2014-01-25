@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		jshint: {
+		/*jshint: {
 			files: ['Gruntfile.js', 'dist/js/pattern-lib.js'],
 			options: {
 				globals: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 					document: true
 				}
 			}
-		},
+		},*/
 		watch: {
 			files: [
 				'_tmpl/*',
@@ -63,8 +63,15 @@ module.exports = function(grunt) {
 			main: {
 				files: [
 					{
-						src: ['_tmpl/*.html'],
+						src: ['_tmpl/*.php'],
 						dest: 'dist/',
+						expand: true,
+						flatten: true,
+						filter: 'isFile'
+					},
+					{
+						src: ['_tmpl/patterns/*'],
+						dest: 'dist/patterns',
 						expand: true,
 						flatten: true,
 						filter: 'isFile'
@@ -108,6 +115,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('cleanup', ['chmod:writeable', 'clean', 'chmod:readonly']);
+
 /* chmod tasks are only useable when doing a remote build, which we will eventually. Else
    we’re going to end up with a lot of local permission weirdness. The chmod tasks are 
    handy in that they don’t allow you to accidentally make changes to anything in dist.
@@ -118,5 +126,5 @@ module.exports = function(grunt) {
 */
 // grunt.registerTask('default', ['chmod:writeable', 'clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy', 'chmod:readonly']);
 
-	grunt.registerTask('default', ['clean', 'concat', 'jshint', 'uglify', 'cssmin', 'copy']);
+	grunt.registerTask('default', ['clean', 'concat', /*'jshint'*/, 'uglify', 'cssmin', 'copy']);
 };

@@ -1,0 +1,118 @@
+/* 
+This CSS resource incorporates links to font software which is 
+the valuable copyrighted property of WebType LLC, The Font Bureau 
+and/or their suppliers. You may not attempt to copy, install, 
+redistribute, convert, modify or reverse engineer this font 
+software. Please contact WebType with any questions: www.webtype.com
+*/
+
+body:after { content: ''; background-image: url(http://pls.webtype.com/v.gif?ct=37548,37549,37550,37551,37509,37514,37511,37510,37507,37508,37652,37647,37649,37648,37512,37513,37515,37516&r=6209&p=5333&h=kgAHhLgDGhTUJXEMWZjvBQ%3d%3d); }
+
+@font-face {
+ font-family: "Franklin ITC Pro Bold";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/eaaadd6b-b1b9-43c8-9cbd-35a67dc05d46") format("woff");
+ font-style: normal;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Franklin ITC Pro Bold";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/98537f6f-e67d-43e8-9d3c-307c4bec5a7b") format("woff");
+ font-style: italic;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Franklin ITC Pro Light";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/de35a79a-63f7-4f98-ba83-ee606a78ab78") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Franklin ITC Pro Light";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/651454cd-eede-454c-a84b-18fbb8d35322") format("woff");
+ font-style: italic;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/db90ef64-adfd-486d-a989-8b70cb00191c") format("woff");
+ font-style: normal;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Georgia Pro";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/708d476d-deaf-4078-b266-281f94ced1bd") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/9880d405-7368-42a0-80db-c9c841154a22") format("woff");
+ font-style: italic;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/5f7d6cdd-a817-437a-ba39-caa42081ccab") format("woff");
+ font-style: italic;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Georgia Pro Black";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/8bc4ab8a-aa2a-4b5c-ad4a-5020d9eef494") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro Black";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/46ee6243-ff96-4810-9f2e-43577ccd2f5a") format("woff");
+ font-style: italic;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro Cond";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/4b3688f7-884e-4b60-8164-76a00d0b0058") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro Cond";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/96d37c2b-4421-46dd-9c33-a70493d803e4") format("woff");
+ font-style: normal;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Georgia Pro Cond";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/0fec2dd0-6634-43da-b4f5-8fa60f2ceadb") format("woff");
+ font-style: italic;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro Cond";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/ba0b9acb-c52d-4a81-afb0-94bc1253b349") format("woff");
+ font-style: italic;
+ font-weight: bold;
+}
+@font-face {
+ font-family: "Georgia Pro Light";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/d2f5587a-e633-4a69-b0b8-e9d986bbcb2d") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro Light";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/9d5ab8ed-273f-48b0-9594-a9279c01ff66") format("woff");
+ font-style: italic;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro SemiBold";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/92173dfb-c630-471f-85c6-d214874a91a7") format("woff");
+ font-style: normal;
+ font-weight: normal;
+}
+@font-face {
+ font-family: "Georgia Pro SemiBold";
+ src: url("http://wac.6a25.edgecastcdn.net/006A25/webtype/ff/3/bd5fadc4-b2ed-4ce7-82fc-25cfa68561b3") format("woff");
+ font-style: italic;
+ font-weight: normal;
+}

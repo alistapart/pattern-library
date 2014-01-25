@@ -1,0 +1,193 @@
+.xx {
+  padding: 1em 0;
+  margin: 0;
+  background-color: white;
+}
+
+.xx-title {
+    margin: 2em 0 0.25em 0;
+    text-align: center;
+}
+
+.xx-subtitle {
+    text-align: center;
+}
+
+.xx .swatch {
+  float: left;
+  margin-bottom: 1em;
+  width: 96%;
+  margin-right: 2%;
+  background-color: white;
+  padding: 10px 0;
+  padding: 0.625rem 0;
+  border-radius: 3px;
+  border-radius: 0.1875rem;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.xx .swatch-details {
+  padding: 0 8px;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 40em) {
+  .xx .swatch {
+    width: 33%;
+  }
+}
+@media (min-width: 50em) {
+  .xx .swatch {
+    width: 25%;
+  }
+}
+@media (min-width: 60em) {
+  .xx .swatch {
+    width: 20%;
+  }
+}
+
+.xx .swatch-preview {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  float: left;
+  height: 60px;
+  width: 100%;
+  margin: 0 0.8em 0.5em 0;
+}
+
+.xx .swatch-details {
+  float: left;
+  margin: 0 1em 0 0;
+  font-size: 0.8em;
+  clear: both;
+  font-family: "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
+}
+
+@media (min-width: 70em) {
+  .xx .swatch-details {
+    clear: none;
+  }
+}
+
+.xx .pattern {
+  clear: both;
+  float: left;
+  margin: 0;
+  padding-top: 3.5em;
+  padding-bottom: 1.5em;
+  width: 100%;
+}
+
+.xx-patchwork .pattern {
+  margin: 0;
+  border: none;
+}
+
+.xx .pattern-name {
+  font-family: "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
+  font-size: 16px;
+  text-transform: none;
+  margin: 0;
+}
+
+.xx .pattern-details {
+  color: #004b6a;
+  background-color: #fbf9f9;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  padding: 0.5em 1%;
+  width: 96%;
+  margin-left: 2%;
+  overflow: hidden;
+  display: block;
+  border: 1px solid;
+  border-color: #e5e5e5;
+  border-radius: 3px 3px 0 0;
+}
+
+.xx .pattern-markup {
+  border: 1px solid;
+  border-color: #e5e5e5;
+  width: 64%;
+  display: block;
+  font-size: 12px;
+  overflow: scroll;
+  max-height: 200px;
+  padding: 1em 2%;
+  margin: 1em 0;
+  float: left;
+}
+
+.xx .pattern-markup,
+.xx :not(pre) > code[class*="language-"] {
+  padding: 1em 2% !important;
+}
+
+.xx .pattern-details:hover {
+  cursor: pointer;
+}
+
+.xx .pattern .pattern-code {
+  border: 1px solid #ccc;
+  float: left;
+  width: 67.5%;
+  margin: 0.5em 0 0.5em 0;
+  font-family: Menlo,Monaco,'Courier New',Courier,monospace;
+  font-size: 13px;
+  line-height: 1.2em;
+  padding: 0.5em;
+}
+
+.xx .pattern-usage {
+  float: right;
+  width: 30%;
+  margin: 1.25em 0 0.5em 0;
+  font-size: 13px;
+  white-space: pre-line;
+  line-height: 1.4em;
+  font-family: "Gotham A", "Gotham B", "Open Sans Regular", "Verdana", "Helvetica", "Arial";
+}
+
+.xx .pattern-preview {
+  padding: 0.1px 10px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #e5e5e5;
+  border-radius: 0 0 3px 3px;
+  border-top: none;
+  width: 96%;
+  margin-left: 2%;
+}
+
+.xx .pattern {
+  clear: both;
+}
+
+.xx .pattern-link {
+  float: right;
+  padding: 0 0 0 0.5em;
+}
+
+.xx .pattern-link:hover,
+.xx .pattern-link:focus,
+.xx .pattern-link:active {
+  border-bottom: none;
+}
+
+.xx .xx-nav {
+    position: fixed;
+    top: 0;
+    padding: 0.5em 2%;
+    left: 0;
+    min-height: 30px;
+}
+
+.xx .xx-nav .inline-items {
+    float: left;
+}
+
+.xx .pattern-jump {
+    float: right;
+    margin: 0.75em 0;
+}
