@@ -18,7 +18,6 @@
 
 	<link rel="stylesheet" href="css/pattern-lib.css" />
 
-	
 </head>
 
 <body class="xx">
