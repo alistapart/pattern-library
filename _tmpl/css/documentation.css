@@ -131,6 +131,7 @@
 .xx .pattern-markup,
 .xx :not(pre) > code[class*="language-"] {
   padding: 1em 2% !important;
+  line-height: 1.7em;
 }
 
 .xx .pattern-details:hover {
@@ -168,6 +169,11 @@
   width: 96%;
   margin-left: 2%;
   float: left;
+}
+
+.xx .pattern-preview :not(pre)>code[class*=language-], pre[class*=language-],
+.xx .pattern-preview pre[class*=language-] {
+    background-color: transparent;
 }
 
 .xx .pattern {
