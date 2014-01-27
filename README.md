@@ -74,4 +74,3 @@ git pull --rebase upstream master
 ```
 
 You can now push to your own fork to both update it and add your commit(s), then submit your pull request. Keep in mind that it’s only a good idea to do this if you _haven't_ already submitted a pull request, unless you want to create a new one. Have a look at <cite>Pro Git</cite>’s [chapter on rebasing](http://git-scm.com/book/ch3-6.html) to learn more.
-
