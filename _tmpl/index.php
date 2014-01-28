@@ -36,7 +36,8 @@
             <div class="global-nav deluxe xx-nav">
                 
                 <ul class="inline-items">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="http://alistapart.com">Home</a></li>
+                    <li><a href="patchwork.php">View as patchwork</a></li>
                 </ul>
                 
                 <form action="" method="post" id="pattern" class="pattern-jump">
@@ -115,30 +116,5 @@
 </body>
 
 <script src="js/pattern-lib.js"></script>
-
-<script>
-
-    // Adds class of js to the html tag if JS is enabled
-    document.getElementsByTagName('html')[0].className += ' js';
-    
-    // Adds class of svg to the html tag if svg is enabled
-    (function flagSVG() {
-        var ns = {'svg': 'http://www.w3.org/2000/svg'};
-        if(document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")) {document.getElementsByTagName('html')[0].className += ' svg';}
-    })();
-    
-    (function (document, undefined) {
-        // Pattern selector
-        document.getElementById('pattern-submit').style.display = 'none';
-        document.getElementById('pattern-select').onchange = function() {
-            //document.location=this.options[this.selectedIndex].value;
-            var val = this.value;
-            if (val !== "") {
-                window.location = val;
-            }
-        }
-    })(document);
-
-</script>
 
 </html> 
