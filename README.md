@@ -1,7 +1,7 @@
 pattern-library
 ===============
 
-The ALA Pattern Library.
+The [ALA Pattern Library](http://patterns.alistapart.com/).
 
 ## Contribution Guide
 
