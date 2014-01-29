@@ -32,6 +32,8 @@
             
         <h1 class="xx-title">A Pattern Apart</h1>
         <p class="xx-subtitle">A List Apart's pattern library</p>
+        
+        <p class="xx-subtitle">This is the patchwork view which doesn't include the markup preview and usage examples. This view is particularly useful for device testing because it shows elements at full-width, presented on the page as they would appear on the site.</p>
 
         <div class="global-nav deluxe xx-nav">
             
