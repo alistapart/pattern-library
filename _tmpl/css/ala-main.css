@@ -153,7 +153,7 @@ h2{margin:27px
 0 12px;font-size:18px;line-height:30px;font-family:"Franklin ITC Pro Bold",sans-serif;font-weight:normal;font-style:normal}.secondary-column h2[data-display-letter]:after{content:" (" attr(data-display-letter) ")"}.home-page .secondary-column h2,
 .issue-page .secondary-column
 h2{margin-top:0}.alphabits{position:relative;height:24px;margin-bottom:18px;overflow:hidden}.alphabits
-ul{position:absolute;top:0;left:30px;-webkit-transition:all 200ms ease-in;-moz-transition:all 200ms ease-in;-o-transition:all 200ms ease-in;-ms-transition:all 200ms ease-in;transition:all 200ms ease-in;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden}.alphabits ul
+ol{position:absolute;top:0;left:30px;-webkit-transition:all 200ms ease-in;-moz-transition:all 200ms ease-in;-o-transition:all 200ms ease-in;-ms-transition:all 200ms ease-in;transition:all 200ms ease-in;-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden}.alphabits ol
 li{display:inline-block}.alphabits
 a{display:inline-block;vertical-align:top;width:24px;height:24px;margin-right:5px;font-size:18px;line-height:24px;font-family:"Franklin ITC Pro Bold",sans-serif;font-weight:normal;font-style:normal;text-align:center;background:#eee;border-radius:5px;color:#222;text-transform:uppercase;-webkit-transition:background 200ms ease-in;-moz-transition:background 200ms ease-in;-o-transition:background 200ms ease-in;-ms-transition:background 200ms ease-in;transition:background 200ms ease-in}.alphabits a:hover{text-decoration:none;background:#ddd;cursor:pointer}.alphabits
 a.arrow{position:absolute;top:-1px;left:-1px;font-size:14px;line-height:28px;border:1px
