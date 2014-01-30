@@ -27,6 +27,12 @@ function inc($type,$name) {
     global $patternsPath; 
     global $styleguidePath;
     $filePath = $patternsPath;
+    // Determine which directory to look in
+    if($type=='article') {
+        $filePath = $filePath.'article';
+    } else {
+        $filePath = $filePath;
+    }
     // Iterate over the appropriate path
     $objects = new RecursiveIteratorIterator(new ExcludeFilter(new RecursiveDirectoryIterator($filePath)));
     foreach($objects as $objName => $object) {
@@ -48,8 +54,13 @@ function displayPatchwork($dir) {
             $fPlain = ucwords(str_replace('-', '. ', $fName));
             $pathToFile = str_replace($patternsPath, '', $dir);
             if(is_dir($dir.'/'.$ff)) { // If main section
-                echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
-                echo "    <h2 class=\"xx-section-title\">".$fPlain."</h2>\n";
+                if ($fName == 'article') {
+                    echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
+                    echo "    <h2 class=\"xx-section-title\">".$fPlain."</h2>\n";
+                } else {
+                    echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
+                    echo "    <h2 class=\"xx-section-title\">".$fPlain."</h2>\n";
+                }
             } else { // If sub section
                 if(pathinfo($ff,PATHINFO_EXTENSION) == 'html' && $fName != 'header' && $fName != 'head' && $fName != 'foot') { // Skip non-HTML files
                     echo "<div class=\"pattern\" id=\"".$fName."\">\n";
@@ -78,8 +89,16 @@ function displayPatterns($dir) {
             $pathToFile = str_replace($patternsPath, '', $dir);
             
             if(is_dir($dir.'/'.$ff)) { // If main section
-                echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
-                echo "    <h3 class=\"xx-section-title\">".$fPlain."</h3>\n";
+                if ($fName == 'article') {
+                    echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
+                    echo "    <h3 class=\"xx-section-title\">".$fPlain."</h3>\n";
+                    echo "    <article class=\"article-layout hentry\">\n";
+                    echo "        <div class=\"main-content\">\n\n";
+                    
+                } else {
+                    echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
+                    echo "    <h3 class=\"xx-section-title\">".$fPlain."</h3>\n\n";
+                }
             } else { // If sub section
                 if(pathinfo($ff,PATHINFO_EXTENSION) == 'html' && $ff != 'foot.html') { // Skip non-HTML files
                     echo "<div class=\"pattern\" id=\"".$fName."\">\n";
@@ -96,6 +115,8 @@ function displayPatterns($dir) {
             }
             if(is_dir($dir.'/'.$ff)) { // If main section
                 displayPatterns($dir.'/'.$ff);
+                echo "        </div>\n";
+                echo "    </article>\n";
                 echo "</section>\n\n";
             }
         }
@@ -113,7 +134,11 @@ function displayOptions($dir) {
             $pathToFile = str_replace($patternsPath, '', $dir);
 
             if(is_dir($dir.'/'.$ff)) { // If main section
-                echo "    <option value=\"#".$fName."\">".$fPlain."</option>\n";
+                if ($fName == 'article') {
+                    echo "<optgroup label=\"".$fPlain."\"/>\n";
+                } else {
+                    echo "    <option value=\"#".$fName."\">".$fPlain."</option>\n";
+                }
             } else { // If sub section
                 if(pathinfo($ff,PATHINFO_EXTENSION) == 'html' && $ff != 'foot.html') { // Skip non-HTML files
                     echo "    <option value=\"#".$fName."\">&#160;&#160;&#160;&#160;".$fName."</option>\n";
@@ -123,31 +148,11 @@ function displayOptions($dir) {
                 displayOptions($dir.'/'.$ff);
             }
             if(is_dir($dir.'/'.$ff)) { // If main section
-                echo "</optgroup>\n";
-            }
-        }
-    }
-}
-
-function displayList($dir) {
-    global $patternsPath;
-    global $styleguidePath;
-    $ffs = scandir($dir);
-    foreach($ffs as $ff) {
-        if($ff != '.' && $ff != '..') {
-            $fName = basename($ff,'.html');
-            $fPlain = ucwords(str_replace('-', '. ', $fName));
-            $pathToFile = str_replace($patternsPath, '', $dir);
-            if(is_dir($dir.'/'.$ff)) { // If main section
-                echo "<li><a href=\"#".$fName."\">$fPlain</a>\n";
-            } else { // If sub section
-                if(pathinfo($ff,PATHINFO_EXTENSION) == 'html' && $ff != 'foot.html') { // Skip non-HTML files
-                    echo "    <li><a href=\"#".$fName."\">".$fName."</a></li>\n";
+                if ($fName == 'article') {
+                    echo "</optgroup>\n";
                 }
             }
-            if(is_dir($dir.'/'.$ff)) { // If main section
-                echo "</li>\n";
-            }
+            
         }
     }
 }

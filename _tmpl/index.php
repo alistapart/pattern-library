@@ -17,7 +17,7 @@
 	<title>A List Apart Pattern Library</title>
 
 	<link rel="stylesheet" href="css/pattern-lib.css" />
-	
+    
 </head>
 
 <body class="xx">
@@ -58,7 +58,7 @@
                 	<div class="pattern-details">
                 	    <h3 class="pattern-name">Swatches</h3>
                 	</div>
-                	<div class="pattern-preview">
+                    <div class="pattern-preview">
                         <ul class="swatches">
                             <li class="swatch">
                                 <p class="swatch-preview" style="background-color: #222;">
