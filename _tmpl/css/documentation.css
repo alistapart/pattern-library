@@ -5,8 +5,16 @@
 }
 
 .xx-title {
-    margin: 2em 0 0.25em 0;
+    margin: 4.5em 0 0.25em 0;
     text-align: center;
+}
+
+@media (min-width: 40em) {
+
+    .xx-title {
+        margin-top: 2em;
+    }
+
 }
 
 .xx-subtitle {
@@ -199,14 +207,28 @@
     left: 0;
     min-height: 30px;
     z-index: 10000;
+    display: block;
+    text-align: center;
 }
 
-.xx .xx-nav .inline-items {
-    float: left;
+@media (min-width: 40em) {
+    
+    .xx .xx-nav {
+        text-align: left;
+    }
+    
+    .xx .xx-nav,
+    .xx .xx-nav .inline-items {
+        float: left;
+    }
+    
+    .xx .pattern-jump {
+        float: right;
+    }
+
 }
 
 .xx .pattern-jump {
-    float: right;
     margin: 0.75em 0;
 }
 
