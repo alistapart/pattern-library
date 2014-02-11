@@ -3,24 +3,30 @@
     $pageURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
     if (isset($_POST['uri']) && isset($_POST['section'])) {
         $pageURL .= $_POST[uri].$_POST[section];
+        $pageURL = htmlspecialchars( filter_var( $pageURL, FILTER_SANITIZE_URL ) );
+
         header("Location: $pageURL");
     }
 ?>
 <!doctype HTML>
 <html lang="en">
 <head>
-	
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>A List Apart Pattern Library</title>
+    <title>A List Apart Pattern Library</title>
 
-	<link rel="stylesheet" href="css/pattern-lib.css" />
+    <link rel="stylesheet" href="css/pattern-lib.css" />
     
 </head>
 
 <body class="xx">
+
+    <?php if(isset($_GET["url"]) && sanipath( $patternsPath . $_GET["url"] ) ): ?>
+        <?php include_pattern( sanipath( $patternsPath . $_GET["url"] ), "Pattern not found." ); ?>
+    <?php else : ?>
 
         <section class="main-content">
         
@@ -104,7 +110,8 @@
             </main>
         
         </section>
-    	
+
+    <?php endif; ?>
 </body>
 
 <script src="js/pattern-lib.js"></script>

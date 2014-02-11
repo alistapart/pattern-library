@@ -3,6 +3,8 @@
     $pageURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
     if (isset($_POST['uri']) && isset($_POST['section'])) {
         $pageURL .= $_POST[uri].$_POST[section];
+        $pageURL = htmlspecialchars( filter_var( $pageURL, FILTER_SANITIZE_URL ) );
+
         header("Location: $pageURL");
     }
 ?>
@@ -21,7 +23,11 @@
 </head>
 
 <body class="xx xx-patchwork">
-    
+
+     <?php if(isset($_GET["url"]) && sanipath( $patternsPath . $_GET["url"] ) ): ?>
+        <?php include_pattern( sanipath( $patternsPath . $_GET["url"] ), "Pattern not found." ); ?>
+    <?php else : ?>
+
     <section class="main-content">
             
         <h1 class="xx-title">A Pattern Apart</h1>
@@ -54,6 +60,7 @@
     
     </section>
 
+    <?php endif; ?>
 </body>
 
 <script src="js/pattern-lib.js"></script>
