@@ -21,12 +21,6 @@
 </head>
 
 <body class="xx xx-patchwork">
-
-    <?php if(isset($_GET["url"])) : ?>
-    
-        <?php include($patternsPath.$_GET["url"]) ?>
-    
-    <?php else : ?>
     
     <section class="main-content">
             
@@ -59,8 +53,6 @@
         </main><!--@main-->
     
     </section>
-    
-    <?php endif; ?>
 
 </body>
 
