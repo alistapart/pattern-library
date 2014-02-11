@@ -21,12 +21,6 @@
 </head>
 
 <body class="xx">
-    
-    <?php if(isset($_GET["url"])) : ?>
-        
-        <?php include($patternsPath.$_GET["url"]) ?>
-
-    <?php else : ?>
 
         <section class="main-content">
         
@@ -110,9 +104,7 @@
             </main>
         
         </section>
-    
-    <?php endif; ?>
-	
+    	
 </body>
 
 <script src="js/pattern-lib.js"></script>

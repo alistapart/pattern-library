@@ -103,7 +103,7 @@ function displayPatterns($dir) {
                 if(pathinfo($ff,PATHINFO_EXTENSION) == 'html' && $ff != 'foot.html') { // Skip non-HTML files
                     echo "<div class=\"pattern\" id=\"".$fName."\">\n";
                     echo "    <details class=\"pattern-details\">\n";
-                    echo "        <summary class=\"pattern-name\">".$fName." <a class=\"pattern-link\" rel=\"bookmark\" href=\"".$styleguidePath."?url=".$pathToFile."/".$ff."\" title=\"View just this pattern\">#</a></summary>\n";
+                    echo "        <summary class=\"pattern-name\">".$fName."</summary>\n";
                     echo "            <code class=\"pattern-markup language-markup\">".htmlspecialchars(@file_get_contents($dir.'/'.$ff))."</code>\n";
                     echo "        <pre class=\"pattern-usage\"><strong>Usage:</strong> ".htmlspecialchars(@file_get_contents($dir.'/'.str_replace('.html','.txt',$ff)))."</pre>\n";
                     echo "    </details>\n";
