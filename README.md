@@ -32,7 +32,27 @@ $ grunt && grunt watch
 
 #### Setting up Your Dev Environment
 
-Using MAMP or Apache or what-have-you, you’ll want to create a virtualhost that points at `[…]/pattern-library/dist/`. Now you can edit files in the `tmpl` directory, and the `grunt watch` task will automatically rebuild `dist` as you go—giving you a preview of the site as it will appear in the wild, minified and concatenated assets and all.
+`grunt && grunt watch` to setup watching on the source in `_tmpl`.  To view the examples fire up the
+simple development webserver (based on `expressjs`) on `localhost:3000` with:
+
+```bash
+$ node app.js
+```
+
+Or, if you plan on hacking on the core views (`index.ejs` or `patchwork.ejs`) ot the simple devserver itself run it
+with nodemon for reloading on changes.
+
+```bash
+$ nodemon app.js
+```
+
+Now you can edit files in the `tmpl` directory, and the `grunt watch` task will automatically rebuild `dist` as you go—giving you a preview of the site as it will appear in the wild, minified and concatenated assets and all.
+
+To view your the pattern library in your browser you can just hit `localhost:3000` in your web browser.
+
+#### Deployment
+
+The included `PHP` application in `_tmpl` will work quite nicely if you'd like to push this out to an `Apache` server somewhere.  In time, the simple `app.js` server may be extended as a another viable option for deployment but for now it is strictly useful for allowing folks to quickly get started viewing and hacking on the patterns without `Apache`.
 
 #### Adding Patterns
 
