@@ -58,7 +58,14 @@ app.get('/', function(req, res){
       console.log(results);
       res.render("index.ejs", {patternOptions: results.names, patterns: results.patterns});
   });
+});
 
+app.get("/patchwork", function(req, res) {
+  walk(__dirname + "/dist/patterns", function(results) {
+      console.log("results");
+      console.log(results);
+      res.render("patchwork.ejs", {patternOptions: results.names, patterns: results.patterns});
+  });
 });
 
 app.listen(3000);
