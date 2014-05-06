@@ -33,14 +33,14 @@ $ grunt && grunt watch
 #### Setting up Your Dev Environment
 
 `grunt && grunt watch` to setup watching on the source in `_tmpl`.  To view the examples fire up the
-simple development webserver (based on `expressjs`) on `localhost:3000` with:
+simple development webserver (using `expressjs`) on `localhost:3000` with:
 
 ```bash
 $ node app.js
 ```
 
-Or, if you plan on hacking on the core views (`index.ejs` or `patchwork.ejs`) ot the simple devserver itself run it
-with nodemon for reloading on changes.
+Or, if you plan on hacking on the devserver views (`index.ejs` or `patchwork.ejs`) or the devserver itself run it
+with `nodemon` for automatic restarting on changes.
 
 ```bash
 $ nodemon app.js
