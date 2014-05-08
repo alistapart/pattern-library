@@ -38,6 +38,7 @@
                 <ul class="inline-items">
                     <li><a href="http://alistapart.com">Home</a></li>
                     <li><a href="patchwork.php">View as patchwork</a></li>
+                    <li><a href="https://github.com/alistapart/pattern-library">Github Repo</a></li>
                 </ul>
                 
                 <form action="" method="post" id="pattern" class="pattern-jump">
