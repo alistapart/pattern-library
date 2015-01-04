@@ -40,6 +40,7 @@
             <ul class="inline-items">
                 <li><a href="http://alistapart.com">Home</a></li>
                 <li><a href="/">View with code examples</a></li>
+                <li><a href="https://github.com/alistapart/pattern-library">Github Repo</a></li>
             </ul>
             
             <form action="" method="post" id="pattern" class="pattern-jump">
