@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 			main: {
 				files: [
 					{
-						src: ['_tmpl/*.php'],
+						src: ['_tmpl/*.php', '_tmpl/*.ico'],
 						dest: 'dist/',
 						expand: true,
 						flatten: true,
