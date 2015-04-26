@@ -19,6 +19,7 @@
     <title>A List Apart Pattern Library</title>
 
     <link rel="stylesheet" href="css/pattern-lib.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
 </head>
 
