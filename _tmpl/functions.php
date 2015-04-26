@@ -24,7 +24,7 @@ class ExcludeFilter extends RecursiveFilterIterator {
 }
 
 function inc($type,$name) {
-    global $patternsPath; 
+    global $patternsPath;
     global $styleguidePath;
     $filePath = $patternsPath;
     // Determine which directory to look in
@@ -87,14 +87,14 @@ function displayPatterns($dir) {
             $fName = basename($ff,'.html');
             $fPlain = ucwords(str_replace('-', '. ', $fName));
             $pathToFile = str_replace($patternsPath, '', $dir);
-            
+
             if(is_dir($dir.'/'.$ff)) { // If main section
                 if ($fName == 'article') {
                     echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
                     echo "    <h3 class=\"xx-section-title\">".$fPlain."</h3>\n";
                     echo "    <article class=\"article-layout hentry\">\n";
                     echo "        <div class=\"main-content\">\n\n";
-                    
+
                 } else {
                     echo "<section class=\"xx-section\" id=\"".$fName."\">\n";
                     echo "    <h3 class=\"xx-section-title\">".$fPlain."</h3>\n\n";
@@ -103,9 +103,9 @@ function displayPatterns($dir) {
                 if(pathinfo($ff,PATHINFO_EXTENSION) == 'html' && $ff != 'foot.html') { // Skip non-HTML files
                     echo "<div class=\"pattern\" id=\"".$fName."\">\n";
                     echo "    <details class=\"pattern-details\">\n";
-                    echo "        <summary class=\"pattern-name\">".$fName." <a class=\"pattern-link\" rel=\"bookmark\" href=\"".$styleguidePath."?url=".$pathToFile."/".$ff."\" title=\"View just this pattern\">#</a></summary>\n";
+                    echo "        <summary class=\"pattern-name\">".$fName."</summary>\n";
                     echo "            <code class=\"pattern-markup language-markup\">".htmlspecialchars(@file_get_contents($dir.'/'.$ff))."</code>\n";
-                    echo "        <pre class=\"pattern-usage\"><strong>Usage:</strong> ".htmlspecialchars(@file_get_contents($dir.'/'.str_replace('.html','.txt',$ff)))."</pre>\n";
+                    echo "        <pre class=\"pattern-usage\"><p><a class=\"pattern-link\" rel=\"bookmark\" href=\"".$styleguidePath."?url=".$pathToFile."/".$ff."\">View just this pattern</a></p><strong>Usage:</strong> ".htmlspecialchars(@file_get_contents($dir.'/'.str_replace('.html','.txt',$ff)))."</pre>\n";
                     echo "    </details>\n";
                     echo "    <div class=\"pattern-preview\">\n";
                     include $dir.'/'.$ff;
@@ -152,7 +152,7 @@ function displayOptions($dir) {
                     echo "</optgroup>\n";
                 }
             }
-            
+
         }
     }
 }
