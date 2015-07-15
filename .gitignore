@@ -8,3 +8,5 @@
 .env
 .project
 node_modules
+dist
+dist/css/pattern-lib.css
