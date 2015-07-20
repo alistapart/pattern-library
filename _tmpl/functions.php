@@ -1,7 +1,7 @@
 <?php
 // Modified from Paul Robert Lloyd's Barebones
 // Config options
-$rootPath = $_SERVER['DOCUMENT_ROOT'];
+$rootPath = __DIR__;
 $styleguidePath = '/';
 $patternsPath = $rootPath.'/patterns/';
 $cssPath = $rootPath.'/css/';
