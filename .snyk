@@ -153,11 +153,25 @@ patch:
         patched: '2019-07-05T21:48:54.666Z'
     - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
         patched: '2019-07-05T21:48:54.666Z'
-  SNYK-JS-HTTPSPROXYAGENT-469131:
-    - snyk > proxy-agent > https-proxy-agent:
-        patched: '2020-01-19T15:25:58.136Z'
-    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
-        patched: '2020-01-19T15:25:58.136Z'
-  SNYK-JS-TREEKILL-536781:
-    - snyk > snyk-sbt-plugin > tree-kill:
-        patched: '2020-01-19T15:25:58.136Z'
+    - grunt-contrib-watch > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - grunt > grunt-legacy-util > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - grunt-contrib-jshint > jshint > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - grunt-contrib-watch > async > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - grunt > grunt-legacy-log > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - grunt-contrib-watch > gaze > globule > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - grunt > grunt-legacy-log > grunt-legacy-log-utils > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2020-01-19T15:27:50.355Z'
