@@ -1,0 +1,58 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>A List Apart Pattern Library</title>
+
+	<link rel="stylesheet" href="css/pattern-lib.css" />
+
+</head>
+
+<body class="xx xx-patchwork">
+    <section class="main-content">
+
+        <h1 class="xx-title">A Pattern Apart</h1>
+        <p class="xx-subtitle">A List Apart's pattern library</p>
+
+        <p class="xx-subtitle">This is the patchwork view which doesn't include the markup preview and usage examples. This view is particularly useful for device testing because it shows elements at full-width, presented on the page as they would appear on the site.</p>
+
+        <div class="global-nav deluxe xx-nav">
+
+            <ul class="inline-items">
+                <li><a href="http://alistapart.com">Home</a></li>
+                <li><a href="/">View with code examples</a></li>
+            </ul>
+
+            <form action="" method="post" id="pattern" class="pattern-jump">
+                <select name="section" id="pattern-select" class="nav-section-select">
+                  <option value="">Jump to&#8230;</option>
+                  <% for(var i=0; i < patternOptions.length; i++) { %>
+                      <option value="#<%= patternOptions[i] %>"><%= patternOptions[i] %></option>
+                  <% } %>
+
+                </select>
+                <input type="hidden" name="uri" value="">
+                <button type="submit" id="pattern-submit">Go</button>
+            </form>
+
+        </div>
+
+        <main role="main">
+          <% for(var i=0; i<patterns.length; i++) { %>
+          <div class="pattern" id="<%= patterns[i].name %>">
+            <%- patterns[i].code %>
+          </div>
+          <% } %>
+        </main><!--@main-->
+
+    </section>
+
+</body>
+
+<script src="js/pattern-lib.js"></script>
+
+</html>
